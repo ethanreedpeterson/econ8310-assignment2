@@ -37,9 +37,9 @@ test  = test[X.columns]
 
 # XGBoost model
 model = XGBClassifier(
-    n_estimators = 200,
-    max_depth = 4,
-    learning_rate = 0.1,
+    n_estimators = 300,
+    max_depth = 5,
+    learning_rate = 0.05,
     random_state = 1
 )
 
