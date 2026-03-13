@@ -57,9 +57,6 @@ modelFit = model.fit(X, y)
 # saving fitted model
 joblib.dump(modelFit, "xgboost_model.pkl")
 
-# make the predictions
-pred = modelFit.predict(test)
+# had error on validPred test - hoping this solves that issue
+pred = [int(x) for x in modelFit.predict(test)]
 print("Number of predictions:", len(pred))
-
-# safety line to make sure predictions are 0/1 integers / binary
-pred = pred.astype(int)
